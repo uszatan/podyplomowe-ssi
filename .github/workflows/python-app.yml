@@ -6,15 +6,18 @@ name: PythonTester
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'wybrane_zagadnienia_io/Lab02/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'wybrane_zagadnienia_io/Lab02/**'
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +33,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
-        pytest --cov=calculator --cov-report=term-missing
+        pytest wybrane_zagadnienia_io/Lab02 --cov=wybrane_zagadnienia_io/Lab02/calculator --cov-report=term-missing
+

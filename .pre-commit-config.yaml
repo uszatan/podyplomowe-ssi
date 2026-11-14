@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/pycqa/pylint
+    rev: v3.3.8
+    hooks:
+      - id: pylint
+        files: ^wybrane_zagadnienia_io/Lab02/
+        args:
+          - --fail-under=8.0
+          - --disable=import-error
+
