@@ -32,3 +32,8 @@ dist/
 .npm/
 *.log
 
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
