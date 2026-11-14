@@ -144,3 +144,15 @@ def test_divide_by_zero_raises_error(zero_divisor):
     calc = Calculator(10, zero_divisor)
     with pytest.raises(ZeroDivisionError, match="Please do not divide by zero!"):
         calc.divide()
+
+@pytest.mark.parametrize(
+    ("a", "b", "expected"),
+    [
+        (2, 3, 5),
+        (-1, -2, -3),
+        (2.5, 3.5, 6.0),
+    ],
+)
+def test_add_parametrized(a, b, expected):
+    calc = Calculator(a, b)
+    assert calc.sum() == expected
