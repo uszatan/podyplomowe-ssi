@@ -34,4 +34,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest wybrane_zagadnienia_io/Lab02 --cov=wybrane_zagadnienia_io/Lab02/calculator --cov-report=term-missing
-
