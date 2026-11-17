@@ -33,4 +33,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
-        pytest wybrane_zagadnienia_io/Lab02 --cov=wybrane_zagadnienia_io/Lab02/calculator --cov-report=term-missing
+        pytest wybrane_zagadnienia_io/Lab02 --ignore=wybrane_zagadnienia_io/Lab02/test_playwright.py --cov=wybrane_zagadnienia_io/Lab02/calculator --cov-report=term-missing

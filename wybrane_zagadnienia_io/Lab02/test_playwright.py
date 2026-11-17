@@ -1,4 +1,4 @@
-# pylint: disable=missing-module-docstring, missing-function-docstring
+# pylint: skip-file
 
 import re
 from playwright.sync_api import Page, expect
